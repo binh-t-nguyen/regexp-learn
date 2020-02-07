@@ -39,30 +39,30 @@
 
 **[j-m]oo**: word starts with one character in the range from 'j' to 'm'
 ```
-> grep '[j-m]oo' regex07.txt
+>grep '[j-m]oo' regex07.txt
 ```
 
 **[j-mz]oo**: word starts with one character in the range from 'j' to 'm' or outliner character 'z'
 ```
-> grep '[j-mz]oo' regex08.txt
+>grep '[j-mz]oo' regex08.txt
 ```
 
 **[j-mJ-Mz]oo**: word starts with one character in the range from 'j' to 'm' or from 'J' to 'M' or outliner character 'z'
 ```
-> grep '[j-mJ-Mz]oo' regex10.txt
+>grep '[j-mJ-Mz]oo' regex10.txt
 ```
 
 **x\*\\.y\***: 0 to mulitple 'x's followed by . and then followed by 0 or multiple 'y's
 *Notes: the \\. is an escape of .*
 ```
-> grep 'x*\.y*' regex11.txt
+>grep 'x*\.y*' regex11.txt
 ```
 
 ***x[#:.]y***: one character between x and y. It could be either #, :,.
 *Notes: inside the [], the . does not have special meaning (like wildchar) so it is treated as literal*
 *The -, ^ have special meaning inside [] so it needs to be escaped if we need to use it*
 ```
-> grep 'x[#:.]y' regex11.txt
+>grep 'x[#:.]y' regex11.txt
 >grep 'x[#:\^]y' regex12.txt
 >grep 'x[#\\\^]y' regex13.txt
 ```
@@ -71,17 +71,17 @@
 
 **^foo.\***: lines starting with 'foo' and followed by any characters
 ```
-> grep '^foo.*' regex15.txt
+>grep '^foo.*' regex15.txt
 ```
 
 **.\*bar$**: lines starting with any characters and ending with 'bar'
 ```
-> grep '.*bar$' regex16.txt
+>grep '.*bar$' regex16.txt
 ```
 
 **^foo$**: lines starting and ending with foo
 ```
-> grep '^foo$' regex17.txt
+>grep '^foo$' regex17.txt
 ```
 
 ## Extended Set:
@@ -90,5 +90,5 @@
 **^\[0-9]{3}$**: lines starting with 3 digits.
 *Notes:* the {3} tells the regexp engine repeat the search 3 times
 ```
-> grep '^\[0-9]{3}$' reg18.txt
+>grep '^\[0-9]{3}$' reg18.txt
 ```
