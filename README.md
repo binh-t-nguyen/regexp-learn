@@ -90,5 +90,31 @@
 **^\[0-9]{3}$**: lines starting with 3 digits.
 *Notes:* the {3} tells the regexp engine repeat the search 3 times
 ```
->grep '^\[0-9]{3}$' reg18.txt
+>grep '^\[0-9]{3}$' regex18.txt
+```
+
+**^[a-z]{4,6}**: all the lines that have word lengths from 4 to 6 characters
+```
+>grep -E '^[a-z]{4,6}$' regex19.txt
+```
+
+**(ha){4,}**: all the lines that have 'ha' repeated for more than or equal 4 times
+```
+>grep -E '(ha){4,}' regex20.txt
+```
+
+**^(ha){,2}$**: all the lines that have 'ha' repeated for less than or equal to 2 times
+```
+>grep -E '^(ha){,2}$' regex21.txt
+```
+
+**fooa+bar**: all the words starting with 'foo' and then 1 or multiple 'a' and then 'bar'
+```
+>grep -E 'fooa+bar' regex22.txt
+```
+
+**https?://website**: the values could be either 's' or no 's'**
+*Notes:* the '?' followed by a  character means binary value: zero or one
+```
+>grep -E 'https?://website' regex23.txt
 ```
